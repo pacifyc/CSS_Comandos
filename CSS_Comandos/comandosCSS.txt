@@ -1,0 +1,670 @@
+	CSS dentro do documento HTML
+
+--- [ HTML ] ---
+
+	• Inline:
+
+<h2 style="font-size: 18px">possui 18 pixels de tamanho.</h2>
+
+_____________________________________________________________________________
+
+--- [ HTML ] ---
+
+	• Incorporadas;
+
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Exemplo dos elementos apresentados</title>
+
+		<style type="text/css">
+
+			h2 {
+
+				color: blue;
+
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h2>Este título possui a cor azul. Valor declarado na regra CSS incorporada no documento entre as tags "style"</h2>
+
+	</body>
+
+</html>
+
+_____________________________________________________________________________
+
+
+	• Externas
+
+Podemos classifica-las em:
+
+                          linkadas 
+                          incorporadas
+
+--- [ HTML ] ---
+
+	[ Linkadas ]
+
+------------------------------------------------------------------
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Exemplo dos elementos apresentados</title>
+
+		<link rel="stylesheet" href="estilo.css">
+
+	</head>
+
+	<body>
+
+		<h2>Este título possui a cor azul. Valor declarado na regra CSS dentro do arquivo "estilo.css"</h2>
+
+	</body>
+
+</html>
+------------------------------------------------------------------
+
+
+
+--- [ HTML ] ---
+
+	[ Incorporadas ]
+
+------------------------------------------------------------------
+
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Exemplo dos elementos apresentados</title>
+
+		<style type="text/css">
+
+			@import url("estilo.css");
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h2>Este título possui a cor azul. Valor declarado na regra CSS dentro do arquivo importado "estilo.css".</h2>
+
+	</body>
+
+</html>
+
+------------------------------------------------------------------
+
+____________________________________________________________________
+
+	Seletor Universal
+____________________________________________________________________
+
+* {margin:0; padding:0;}
+___________________________________________________________________
+
+	Seletor Tag ou tipo
+___________________________________________________________________
+
+h1{color:blue; font-size:50px;}
+___________________________________________________________________
+
+	Seletor Atributo
+___________________________________________________________________
+
+input[type="text"]{width:200px; heigth:40; background-color:#ccc; border:none}
+____________________________________________________________________
+
+	Seletor tipo ID
+____________________________________________________________________
+
+
+--- [ CSS ] ---
+
+#teste {
+
+   background-color: green; /* cor de fundo verde */
+
+}
+
+--- [ HTML ] ---
+
+<body id="teste">
+
+</body>
+
+
+____________________________________________________________________
+
+	Seletor tipo class
+____________________________________________________________________
+
+
+--- [ CSS ] ---
+
+.aula{
+
+color: blue; /* cor de texto azul */
+
+}
+
+.teste{
+
+background-color: green;  /* cor do fundo do texto verde */
+
+}
+
+--- [ HTML ] ---
+
+
+<h1 class="aula">Título com cor azul</h1>
+
+
+<p class="aula teste">Parágrafo com a cor azul.</p>
+
+
+____________________________________________________________________
+
+	Declaração única
+____________________________________________________________________
+
+
+Por exemplo: Border 
+
+--- [ CSS ] ---
+
+div {
+
+   border-style: solid;
+
+   border-width: 1px;
+
+   border-color: black;
+
+}
+
+- ou dessa forma:
+
+
+div {
+
+   border: solid 1px black;
+
+}
+
+____________________________________________________________________
+
+	Herança
+____________________________________________________________________
+
+
+--- [ HTML ] ---
+
+<ul>
+
+   <li>Este é um elemento filho de ul.</li>
+
+   <li>Este também.</li>
+
+</ul>
+
+
+--- [ CSS ] ---
+
+
+ul {
+
+   font-size: 14px;
+
+}
+
+ul li {
+
+   color: blue;
+
+}
+
+
+____________________________________________________________________
+
+	Propriedades bastante usadas
+____________________________________________________________________
+
+	- Para fontes e textos
+
+Font-size – Esta define o tamanho da fonte.
+
+
+--- [ CSS ] ---
+
+p {
+
+   font-size: 14px;
+
+}
+
+------------------------------------------------------------------
+
+Font-family – Define a família de fontes. Com ela você pode declarar 
+              uma fonte específica e uma genérica.
+
+
+
+•	Fontes específicas: Verdana, Time New Roman, Monotype Cursiva, 
+                           Courier New, etc.
+------------------------------------------------------------------
+p {
+
+   font-family: Verdana, sans-serif;
+
+}
+------------------------------------------------------------------
+
+
+•	Fontes genéricas: serif (fontes com serifas),
+
+------------------------------------------------------------------
+p {
+
+   font-family:  "Times New Roman”, serif;
+
+}
+------------------------------------------------------------------
+
+
+Font-style – Usada para dar estilo. Você pode usar esta propriedade 
+             para valores “normal”, “oblique” ou “italic”.
+------------------------------------------------------------------
+p {
+
+   font-style: italic;
+
+}
+------------------------------------------------------------------
+
+
+Line-height – É uma propriedade de dimensionamento que permite 
+              estipular espaçamento entre linhas.
+
+------------------------------------------------------------------
+p {
+
+   line-height: 36px;
+
+}
+------------------------------------------------------------------
+
+
+Font – A propriedade “font” é indicada se quer diminuir o código 
+       reunindo todos os valores das propriedades acima em uma só
+       declaração.
+------------------------------------------------------------------
+p {
+
+   font:bold italic 30px/36px Verdana;
+
+}
+------------------------------------------------------------------
+
+
+Text-align – Esta é a propriedade usada para determinar o tipo de 
+             alinhamento que um texto possuirá. Os valores para 
+             esta propriedade são: 
+left, 
+right, 
+center e 
+justify.
+
+
+	• Para alinhamento à esquerda – text-align:left;
+	• Para alinhamento à direita  – text-align:right;
+	• Centralizado – text-align   - text-align:center;
+	• Justificado – text-align    - text-align:justify;
+
+
+	• Um Linha abaixo do texto    - text-decoration:underline;
+	• Um Linha acima do texto     - text-decoration:overline;
+
+	• texto                       - text-decoration:line-through;
+
+
+	• exibir texto em maiúsculo   - text-transform:uppercase;
+	• exibir texto em menú sculo   - text-transform:lowercase;
+
+	• primeira letra da palavra    - text-transform:capitalize;
+
+
+	• texto com sobra              - text-shadow:3px 3px 5px red;
+
+                                         (horizontal, vertical, desfoque cor)
+
+
+
+
+
+
+
+
+
+____________________________________________________________________
+
+	- Para cor de textos
+------------------------------------------------------------------
+p {
+
+   color: #ff0000; /* cor vermelha */
+
+}
+------------------------------------------------------------------
+
+
+____________________________________________________________________
+
+
+
+
+____________________________________________________________________
+
+	- Para posição de blocos
+
+------------------------------------------------------------------
+
+   float: left;         Flutua o bloco para esqueda.
+
+   float: right;        Flutua o bloco para direita.
+
+
+-----------------------------------------------------------------
+
+   position: relative;
+			Definiria para o bloco PAI.
+
+                        Caso não seja definido relativo para o bloco
+                        PAI o absoluto se posisionara em relação ao 
+                        navegador
+
+
+   position: absolute;
+
+			Definiria para o bloco Filho.
+
+      left: 10px;   ( esquerda )
+      top: 40px;    ( topo )
+
+	ou
+
+      right: 10px;  ( direita )
+      botton: 40px; ( base )
+
+------------------------------------------------------------------
+
+
+   position: fixed;
+
+                      O bloco se posisiona em relação ao navegador
+                      e não ao bloco PAI.
+
+
+------------------------------------------------------------------
+
+
+
+
+____________________________________________________________________
+
+	- Para dimensões de blocos
+------------------------------------------------------------------
+div {
+
+   width: 400px; /* largura */
+
+   height: 200px; /* altura */
+   
+   min-width: 50px;  /* largura mínima */
+   
+   max-height: 100px  /* altura maxima */
+
+}
+------------------------------------------------------------------
+
+
+____________________________________________________________________
+
+	- Para fundos do site e de blocos
+
+------------------------------------------------------------------
+div {
+
+   background: #fff000 url(imagem-de-fundo.png) repeat;
+
+}
+------------------------------------------------------------------
+
+
+
+Esta regra poderia ser obtida através de variantes de background
+
+------------------------------------------------------------------
+div {
+
+   background-image: url(imagem-de-fundo.png); /* Define a imagem 
+                                                  de fundo */
+
+   background-color: #fff000; /*  Define a cor do fundo amarela */
+
+   background-repeat: repeat;  /* Define a se a imagem do fundo deve
+                                  repetir ou não, ou somente 
+                                  no eixo x, ou no y. 
+                                  No caso se repete em todos os eixos.
+
+}
+------------------------------------------------------------------
+Outras variações:
+
+  • background-attachment – define se a imagem fica fixa ou não 
+                            enquanto rolamos a tela;
+
+  • background-position – define onde a imagem de fundo é posicionada;
+
+
+  • background-clip – define a área onde a imagem de fundo é aplicada;
+
+
+  • background-origin – define a posição de origem da imagem em um 
+                        elemento;
+
+  • background-size – define as dimensões da imagem de fundo.
+
+
+____________________________________________________________________
+
+	- Para margens - Espaçamento externo
+
+------------------------------------------------------------------
+div {
+
+   margin: 10px;
+
+}
+------------------------------------------------------------------
+
+
+Aqui diz que o elemento “div” deve se distanciar 10 pixels em todos 
+os lados em relação a outros elementos ao seu redor. 
+
+
+------------------------------------------------------------------
+div {
+
+   margin-top: 10px;         /* margen no topo */
+
+   margin-right: 10px;       /* margen na direita */
+
+   margin-bottom: 10px;      /* margen na base */
+
+   margin-left: 10px;        /* margen na esquerda */
+
+}
+------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+
+div {
+
+   margin-top: 30px; /* aplica uma margem de 30 pixels no topo 
+                      fazendo com que o bloco se distancie em 
+                      relação ao que estiver acima dele */;
+
+}
+------------------------------------------------------------------
+
+
+____________________________________________________________________
+
+	- Para preenchimentos - Espaçamento interno
+
+------------------------------------------------------------------
+div {
+
+   padding: 10px;
+
+}
+
+div {
+
+   padding: 10px 5px 20px 8px;   /* topo direita base esquerda */
+}
+------------------------------------------------------------------
+
+____________________________________________________________________
+
+	- Para bordas
+
+
+* Border-style: Especifica o estilo da borda.
+
+------------------------------------------------------------------
+div {
+
+   border-style: solid;
+
+}
+------------------------------------------------------------------
+
+
+
+* Border-width: Especifica a espessura.
+
+------------------------------------------------------------------
+div {
+
+   border-width: 1px;  /* Só funciona se border-style também 
+                        estiver declarado */
+
+}
+------------------------------------------------------------------
+
+
+
+* Border-color: Especifica a cor da borda.
+
+------------------------------------------------------------------
+div {
+
+   border-color: #000000;   /* Só funciona se border-style 
+                             também estiver declarado */
+
+}
+------------------------------------------------------------------
+
+
+
+Porém a forma mais utilizada é a que reúne as três em uma 
+só declaração abreviada.
+
+------------------------------------------------------------------
+div {
+
+   border: 2px solid #000000;
+
+}
+------------------------------------------------------------------
+
+
+Esta forma também representa outras variações de cada lado de 
+um elemento. 
+
+------------------------------------------------------------------
+
+div {
+   border-top: 2px solid #000000;
+   border-right: 2px solid #000000;
+   border-bottom: 2px solid #000000;
+   border-left: 2px solid #000000;
+}
+
+------------------------------------------------------------------
+
+	- Para bordas arredondadas
+
+border-radius:20px 50px 100px 200px;
+
+              Superior esqueda
+              Superior direita
+              Inferior direita
+              Inferior esqueda
+
+border-top-left-radius:20px;
+
+border-top-right-radius:20px;
+
+border-bottom-left-radius:20px;
+
+border-bottom-right-radius:20px;
+
+
+
+Se for inserido um espaço( padding ) interno no box( div )
+o valor do tamanho do box será somado com o espaço, com
+o comando abaixo isso não acontece.
+
+
+  box-sizing:border-box; 
+
+
+Inserir Sombra em caixa
+
+	box-shadow:10px 10px 5px green;
+
+     		   horizotal vertical desfoque cor
+
+------------------------------------------------------------------
+
+transition: width 2s linear 1s;
+
+
+
+
+
+
