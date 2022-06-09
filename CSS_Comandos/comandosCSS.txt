@@ -380,6 +380,28 @@ p {
 
 ____________________________________________________________________
 
+	- Para fundos do site e de blocos
+------------------------------------------------------------------
+
+- Este exemplo define uma imagem de fundo “imagem-de-fundo.png”. 
+Ela se repetirá em toda a extensão do elemento no eixo x e y, 
+e atrás desta temos uma cor de fundo amarela.
+
+div {
+
+   background: #fff000 url(imagem-de-fundo.png) repeat;
+
+}
+
+
+div {
+   background-image: url(imagem-de-fundo.png);     /* Define a imagem de fundo */
+   background-color: #fff000;                      /* Define a cor do fundo amarela */
+   background-repeat: repeat;                      /* Define a se a imagem do fundo deve repetir ou não,
+                                                       ou somente no eixo x, ou no y. No caso se repete 
+                                                       em todos os eixos. */
+}
+------------------------------------------------------------------
 
 
 
@@ -399,9 +421,10 @@ ____________________________________________________________________
    position: relative;
 			Definiria para o bloco PAI.
 
-                        Caso não seja definido relativo para o bloco
-                        PAI o absoluto se posisionara em relação ao 
-                        navegador
+      - Caso não seja definido relativo para o bloco PAI 
+        o absoluto se posisionara em relação ao navegador.
+      - Nesta propriedade não tera efeito a sobreposição de
+        elemento acima do outro.
 
 
    position: absolute;
@@ -416,13 +439,16 @@ ____________________________________________________________________
       right: 10px;  ( direita )
       botton: 40px; ( base )
 
+      - Nesta propriedade pode ser sobreposto um elemento acima do outro.
+
 ------------------------------------------------------------------
 
 
    position: fixed;
 
-                      O bloco se posisiona em relação ao navegador
-                      e não ao bloco PAI.
+      - O bloco se posisiona em relação ao navegador e não ao bloco PAI.
+      - Pode ser usada as propriedades left/top ou right/button para 
+      posicionar o elemento 
 
 
 ------------------------------------------------------------------
@@ -667,4 +693,91 @@ transition: width 2s linear 1s;
 
 
 
+___________________________________________________________________
 
+
+-[ html ] -
+
+<div id="flex-container">
+
+	<div class="flex-item"></div>
+
+</div>
+
+	/* float: right; */
+	/* float: left; */
+
+- [ css ] -
+
+#flex-container {
+
+	display:flex;
+	border: 2px solid black;
+	padding: 10px;
+	height: 150px;
+
+}
+
+.flex-item {
+
+	border-radius: 10px;
+	background-color: purple;
+	height: 50px;
+	width: 50px;
+
+}
+
+-----------------------------------------------------------------------------------------
+
+_________________________________ [ HORIZONTAL ]
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área 
+  justify-content: flex-start;              superior esquerda.
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área 
+  justify-content: flex-end;                superior direita.
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  justify-content: center;                  central superior.
+}
+_________________________________ [ VERTICAL ]
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  align-items: flex-start;                  superior esquerda.
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  align-items: flex-end;                    inferior esquerda.
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  align-items: center;                      central verticalmente.
+}
+
+_________________________________ [ VERTICAL ]
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  justify-content: flex-start;              central vertical esquerda.
+  align-items: center;
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  justify-content: flex-end;                central vertical direita.
+  align-items: center;
+}
+
+#flex-container {
+  display: flex;                          - Elemento posicionado na área
+  Justify-content: center;
+  align-items: center;                      central vertical e central horizontal.
+}
