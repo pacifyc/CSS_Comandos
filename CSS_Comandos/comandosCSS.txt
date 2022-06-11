@@ -759,7 +759,7 @@ _________________________________ [ VERTICAL ]
 
 #flex-container {
   display: flex;                          - Elemento posicionado na área
-  align-items: center;                      central verticalmente.
+  align-items: center;                      central esquerda.
 }
 
 _________________________________ [ VERTICAL ]
@@ -778,6 +778,40 @@ _________________________________ [ VERTICAL ]
 
 #flex-container {
   display: flex;                          - Elemento posicionado na área
-  Justify-content: center;
-  align-items: center;                      central vertical e central horizontal.
+  Justify-content: center;                  central vertical e central horizontal.
+  align-items: center;
+}
+
+#flex-container {                         - Elemento posicionado na área
+  display: flex;                            central vertical e distância entre os elementos
+  Justify-content: space-between;           são iguais.
+  align-items: center;                                   |°      °      °|                  
+}
+
+#flex-container {                         - Elemento posicionado na área
+  display: flex;                            central vertical e distância entre os elementos
+  Justify-content: space-around;            é o doblo da distância do elemento lateral para borda.
+  align-items: center;                                   |  °      °      °   |
+}
+
+_________________________________ [ Direção Linha ou Coluna ]
+
+#flex-container {                         - Elementos posicionado na área
+  display: flex;                            superior esqueda na ordem direta em linha
+  flex-direction: row;                    |1| |2| |3| |4|
+}
+
+#flex-container {                         - Elementos posicionado na área
+  display: flex;                            superior direita na ordem inversa em linha
+  flex-direction: row-reverse;                                          |4| |3| |2| |1|
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: column-reverse;
 }
