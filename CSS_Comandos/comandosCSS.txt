@@ -349,7 +349,7 @@ justify.
 
 
 	• exibir texto em maiúsculo   - text-transform:uppercase;
-	• exibir texto em menú sculo   - text-transform:lowercase;
+	• exibir texto em menúsculo   - text-transform:lowercase;
 
 	• primeira letra da palavra    - text-transform:capitalize;
 
@@ -595,12 +595,18 @@ div {
 
    border-style: solid;
 
+   border-style:groove
+   border-style:ridge;
+
+   border-style:inset;
+   border-style:outset;
+
 }
 ------------------------------------------------------------------
 
 
 
-* Border-width: Especifica a espessura.
+* border-width: Especifica a espessura.
 
 ------------------------------------------------------------------
 div {
@@ -691,8 +697,30 @@ transition: width 2s linear 1s;
 
 
 
+-----------------------------------------------------------------------------------------
+
+_________________________________ [ PROPRIEDADE DISPLAY ]
+
+display: block; 
+
+- Os elementos do tipo bloco são organizados um abaixo do outro.
 
 
+display: line; 
+
+- Se adeque ao tamanho do conteúdo que contém.
+
+
+display: inline-block
+
+- Mescla características dos valores inline e block.
+
+display: flex;
+
+
+display: none;
+
+- Faz com que o elemento não seja renderizado
 ___________________________________________________________________
 
 
@@ -815,3 +843,23 @@ _________________________________ [ Direção Linha ou Coluna ]
   display: flex;
   flex-direction: column-reverse;
 }
+
+
+_________________________________ [  ]
+
+
+
+#flex-container {                         - Os elementos variam o seu espaçamento internos laterais
+  display: flex;                            deacordo com o conteudo do elemento aumentado ou diminuindo
+  flex-grow: 0;                             o seu tamanho.
+}
+
+/*
+  flex-grow: 0;
+  flex-grow: 1;
+  flex-grow: 2;
+  flex-grow: 3;
+
+*/
+
+
